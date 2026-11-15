@@ -1,0 +1,145 @@
+{
+    "calls": {
+        "fun": [
+            {
+                "column": 12,
+                "file": "simpsons_long_double.c",
+                "line": 11,
+                "type": "sin"
+            }
+        ],
+        "main": [
+            {
+                "column": 8,
+                "file": "simpsons_long_double.c",
+                "line": 27,
+                "type": "acos"
+            },
+            {
+                "column": 9,
+                "file": "simpsons_long_double.c",
+                "line": 31,
+                "type": "fun"
+            },
+            {
+                "column": 18,
+                "file": "simpsons_long_double.c",
+                "line": 31,
+                "type": "fun"
+            },
+            {
+                "column": 21,
+                "file": "simpsons_long_double.c",
+                "line": 36,
+                "type": "fun"
+            },
+            {
+                "column": 21,
+                "file": "simpsons_long_double.c",
+                "line": 38,
+                "type": "fun"
+            },
+            {
+                "column": 3,
+                "file": "simpsons_long_double.c",
+                "line": 42,
+                "type": "printf"
+            }
+        ]
+    },
+    "global": [
+        {
+            "file": "simpsons_long_double.c",
+            "isStatic": false,
+            "line": 7,
+            "name": "pi",
+            "type": "long double"
+        }
+    ],
+    "local": {
+        "fun": [
+            {
+                "column": 29,
+                "file": "simpsons_long_double.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 8,
+                "name": "xarg",
+                "range": [],
+                "type": "long double"
+            },
+            {
+                "column": 15,
+                "file": "simpsons_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 10,
+                "name": "result",
+                "range": [],
+                "type": "long double"
+            },
+            {
+                "column": 0,
+                "file": "simpsons_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 0,
+                "name": "ret.",
+                "range": [],
+                "type": "x86_fp80"
+            }
+        ],
+        "main": [
+            {
+                "column": 15,
+                "file": "simpsons_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 19,
+                "name": "a",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 15,
+                "file": "simpsons_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 20,
+                "name": "b",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 15,
+                "file": "simpsons_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 21,
+                "name": "h",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 15,
+                "file": "simpsons_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 22,
+                "name": "s1",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 15,
+                "file": "simpsons_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 23,
+                "name": "x",
+                "range": [],
+                "type": "double"
+            }
+        ]
+    }
+}

@@ -1,0 +1,890 @@
+{
+    "calls": {
+        "c_print_results": null,
+        "conj_grad": [
+            {
+                "column": 16,
+                "file": "./cg.c",
+                "line": 571,
+                "type": "sqrtf"
+            }
+        ],
+        "elapsed_time": [
+            {
+                "column": 5,
+                "file": "../common/c_timers.c",
+                "line": 15,
+                "type": "wtime_"
+            }
+        ],
+        "icnvrt": null,
+        "main": [
+            {
+                "column": 15,
+                "file": "./cg.c",
+                "line": 155,
+                "type": "randlc"
+            },
+            {
+                "column": 5,
+                "file": "./cg.c",
+                "line": 160,
+                "type": "makea"
+            },
+            {
+                "column": 2,
+                "file": "./cg.c",
+                "line": 209,
+                "type": "conj_grad"
+            },
+            {
+                "column": 22,
+                "file": "./cg.c",
+                "line": 224,
+                "type": "sqrtf"
+            },
+            {
+                "column": 5,
+                "file": "./cg.c",
+                "line": 246,
+                "type": "timer_clear"
+            },
+            {
+                "column": 5,
+                "file": "./cg.c",
+                "line": 247,
+                "type": "timer_start"
+            },
+            {
+                "column": 2,
+                "file": "./cg.c",
+                "line": 260,
+                "type": "conj_grad"
+            },
+            {
+                "column": 22,
+                "file": "./cg.c",
+                "line": 277,
+                "type": "sqrtf"
+            },
+            {
+                "column": 5,
+                "file": "./cg.c",
+                "line": 302,
+                "type": "timer_stop"
+            },
+            {
+                "column": 9,
+                "file": "./cg.c",
+                "line": 308,
+                "type": "timer_read"
+            },
+            {
+                "column": 6,
+                "file": "./cg.c",
+                "line": 317,
+                "type": "printf"
+            },
+            {
+                "column": 6,
+                "file": "./cg.c",
+                "line": 322,
+                "type": "printf"
+            },
+            {
+                "column": 5,
+                "file": "./cg.c",
+                "line": 339,
+                "type": "c_print_results"
+            }
+        ],
+        "makea": [
+            {
+                "column": 13,
+                "file": "./cg.c",
+                "line": 628,
+                "type": "powf"
+            },
+            {
+                "column": 2,
+                "file": "./cg.c",
+                "line": 641,
+                "type": "sprnvc"
+            },
+            {
+                "column": 2,
+                "file": "./cg.c",
+                "line": 642,
+                "type": "vecset"
+            },
+            {
+                "column": 8,
+                "file": "./cg.c",
+                "line": 652,
+                "type": "printf"
+            },
+            {
+                "column": 8,
+                "file": "./cg.c",
+                "line": 654,
+                "type": "printf"
+            },
+            {
+                "column": 8,
+                "file": "./cg.c",
+                "line": 655,
+                "type": "printf"
+            },
+            {
+                "column": 8,
+                "file": "./cg.c",
+                "line": 656,
+                "type": "exit"
+            },
+            {
+                "column": 3,
+                "file": "./cg.c",
+                "line": 677,
+                "type": "printf"
+            },
+            {
+                "column": 3,
+                "file": "./cg.c",
+                "line": 678,
+                "type": "printf"
+            },
+            {
+                "column": 3,
+                "file": "./cg.c",
+                "line": 679,
+                "type": "printf"
+            },
+            {
+                "column": 3,
+                "file": "./cg.c",
+                "line": 680,
+                "type": "exit"
+            },
+            {
+                "column": 5,
+                "file": "./cg.c",
+                "line": 692,
+                "type": "sparse"
+            }
+        ],
+        "randlc": null,
+        "sparse": null,
+        "sprnvc": [
+            {
+                "column": 11,
+                "file": "./cg.c",
+                "line": 859,
+                "type": "randlc"
+            },
+            {
+                "column": 11,
+                "file": "./cg.c",
+                "line": 864,
+                "type": "randlc"
+            },
+            {
+                "column": 6,
+                "file": "./cg.c",
+                "line": 865,
+                "type": "icnvrt"
+            }
+        ],
+        "timer_clear": null,
+        "timer_read": null,
+        "timer_start": [
+            {
+                "column": 16,
+                "file": "../common/c_timers.c",
+                "line": 36,
+                "type": "elapsed_time"
+            }
+        ],
+        "timer_stop": [
+            {
+                "column": 11,
+                "file": "../common/c_timers.c",
+                "line": 47,
+                "type": "elapsed_time"
+            }
+        ],
+        "vecset": null,
+        "wtime_": [
+            {
+                "column": 3,
+                "file": "../common/wtime.c",
+                "line": 8,
+                "type": "gettimeofday"
+            }
+        ]
+    },
+    "global": [
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 57,
+            "name": "firstrow",
+            "type": "integer"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 58,
+            "name": "lastrow",
+            "type": "integer"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 59,
+            "name": "firstcol",
+            "type": "integer"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 60,
+            "name": "lastcol",
+            "type": "integer"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 55,
+            "name": "naa",
+            "type": "integer"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 56,
+            "name": "nzz",
+            "type": "integer"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 82,
+            "name": "tran",
+            "type": "float"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 81,
+            "name": "amult",
+            "type": "float"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 72,
+            "name": "a",
+            "type": "float[2198001]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 63,
+            "name": "colidx",
+            "type": "integer[2198001]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 64,
+            "name": "rowstr",
+            "type": "integer[14002]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 66,
+            "name": "arow",
+            "type": "integer[2198001]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 67,
+            "name": "acol",
+            "type": "integer[2198001]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 71,
+            "name": "aelt",
+            "type": "float[2198001]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 70,
+            "name": "v",
+            "type": "double[14002]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 65,
+            "name": "iv",
+            "type": "integer[28002]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 73,
+            "name": "x",
+            "type": "double[14003]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 76,
+            "name": "q",
+            "type": "double[14003]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 74,
+            "name": "z",
+            "type": "double[14003]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 77,
+            "name": "r",
+            "type": "float[14003]"
+        },
+        {
+            "file": "./cg.c",
+            "isStatic": true,
+            "line": 75,
+            "name": "p",
+            "type": "float[14003]"
+        },
+        {
+            "file": "../common/c_timers.c",
+            "isStatic": false,
+            "line": 20,
+            "name": "elapsed",
+            "type": "float[64]"
+        },
+        {
+            "file": "../common/c_timers.c",
+            "isStatic": false,
+            "line": 20,
+            "name": "start",
+            "type": "float[64]"
+        }
+    ],
+    "local": {
+        "c_print_results": [
+            {
+                "column": 30,
+                "file": "../common/c_print_results.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 8,
+                "name": "class",
+                "range": [],
+                "type": "char"
+            },
+            {
+                "column": 30,
+                "file": "../common/c_print_results.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 14,
+                "name": "t",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 30,
+                "file": "../common/c_print_results.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 15,
+                "name": "mops",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 11,
+                "file": "../common/c_print_results.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 28,
+                "name": "evalue",
+                "range": [],
+                "type": "char*"
+            }
+        ],
+        "conj_grad": [
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 367,
+                "name": "d",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 15,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 367,
+                "name": "sum",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 20,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 367,
+                "name": "rho",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 25,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 367,
+                "name": "rho0",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 31,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 367,
+                "name": "alpha",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 38,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 367,
+                "name": "beta",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "elapsed_time": [
+            {
+                "column": 12,
+                "file": "../common/c_timers.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 13,
+                "name": "t",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 0,
+                "file": "../common/c_timers.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 0,
+                "name": "ret.",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "icnvrt": [
+            {
+                "column": 26,
+                "file": "./cg.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 890,
+                "name": "x",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "main": [
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 109,
+                "name": "zeta",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 110,
+                "name": "rnorm",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 111,
+                "name": "norm_temp11",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 112,
+                "name": "norm_temp12",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 113,
+                "name": "t",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 15,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 113,
+                "name": "mflops",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 10,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 114,
+                "name": "class",
+                "range": [],
+                "type": "char"
+            },
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 116,
+                "name": "zeta_verify_value",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 31,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 116,
+                "name": "epsilon",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "makea": [
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 610,
+                "name": "rcond",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 616,
+                "name": "shift",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 624,
+                "name": "size",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 18,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 624,
+                "name": "ratio",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 25,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 624,
+                "name": "scale",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "randlc": [
+            {
+                "column": 34,
+                "file": "../common/c_randdp.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 18,
+                "name": "a",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 12,
+                "file": "../common/c_randdp.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 46,
+                "name": "t1",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 15,
+                "file": "../common/c_randdp.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 46,
+                "name": "t2",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 18,
+                "file": "../common/c_randdp.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 46,
+                "name": "t3",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 21,
+                "file": "../common/c_randdp.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 46,
+                "name": "t4",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 24,
+                "file": "../common/c_randdp.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 46,
+                "name": "a1",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 27,
+                "file": "../common/c_randdp.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 46,
+                "name": "a2",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 30,
+                "file": "../common/c_randdp.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 46,
+                "name": "x1",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 33,
+                "file": "../common/c_randdp.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 46,
+                "name": "x2",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 36,
+                "file": "../common/c_randdp.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 46,
+                "name": "z",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 0,
+                "file": "../common/c_randdp.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 0,
+                "name": "ret.",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "sparse": [
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 721,
+                "name": "xi",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "sprnvc": [
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 845,
+                "name": "vecelt",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 20,
+                "file": "./cg.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 845,
+                "name": "vecloc",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "timer_clear": null,
+        "timer_read": [
+            {
+                "column": 0,
+                "file": "",
+                "isParam": false,
+                "isStatic": false,
+                "line": 0,
+                "name": "ret.",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "timer_start": null,
+        "timer_stop": [
+            {
+                "column": 12,
+                "file": "../common/c_timers.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 45,
+                "name": "t",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 15,
+                "file": "../common/c_timers.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 45,
+                "name": "now",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "vecset": [
+            {
+                "column": 12,
+                "file": "./cg.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 904,
+                "name": "val",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "wtime_": [
+            {
+                "column": 18,
+                "file": "../common/wtime.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 7,
+                "name": "tv",
+                "range": [],
+                "type": "timeval"
+            }
+        ]
+    },
+    "structs": {
+        "timeval": [
+            {
+                "member_index": 0,
+                "type": "integer"
+            },
+            {
+                "member_index": 1,
+                "type": "integer"
+            }
+        ]
+    }
+}

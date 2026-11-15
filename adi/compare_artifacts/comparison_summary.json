@@ -1,0 +1,59 @@
+{
+  "compile": {
+    "baseline": {
+      "exe": "/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/compare_artifacts/baseline.out",
+      "exe_returncode": 0,
+      "exe_stderr": "",
+      "ll": "/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/compare_artifacts/baseline.ll",
+      "ll_returncode": 0,
+      "ll_stderr": ""
+    },
+    "mixed": {
+      "exe": "/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/compare_artifacts/mixed.out",
+      "exe_returncode": 0,
+      "exe_stderr": "/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/19.c:124:10: warning: incompatible pointer types initializing 'float *' with an expression of type 'double *' [-Wincompatible-pointer-types]\n  124 |   float* u = (double*)calloc((size_t)(n) * (n), sizeof(double));\n      |          ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/19.c:125:10: warning: incompatible pointer types initializing 'float *' with an expression of type 'double *' [-Wincompatible-pointer-types]\n  125 |   float* v = (double*)calloc((size_t)(n) * (n), sizeof(double));\n      |          ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/19.c:126:10: warning: incompatible pointer types initializing 'float *' with an expression of type 'double *' [-Wincompatible-pointer-types]\n  126 |   float* p = (double*)calloc((size_t)(n) * (n), sizeof(double));\n      |          ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/19.c:127:10: warning: incompatible pointer types initializing 'float *' with an expression of type 'double *' [-Wincompatible-pointer-types]\n  127 |   float* q = (double*)calloc((size_t)(n) * (n), sizeof(double));\n      |          ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n4 warnings generated.\n",
+      "ll": "/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/compare_artifacts/mixed.ll",
+      "ll_returncode": 0,
+      "ll_stderr": "/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/19.c:124:10: warning: incompatible pointer types initializing 'float *' with an expression of type 'double *' [-Wincompatible-pointer-types]\n  124 |   float* u = (double*)calloc((size_t)(n) * (n), sizeof(double));\n      |          ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/19.c:125:10: warning: incompatible pointer types initializing 'float *' with an expression of type 'double *' [-Wincompatible-pointer-types]\n  125 |   float* v = (double*)calloc((size_t)(n) * (n), sizeof(double));\n      |          ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/19.c:126:10: warning: incompatible pointer types initializing 'float *' with an expression of type 'double *' [-Wincompatible-pointer-types]\n  126 |   float* p = (double*)calloc((size_t)(n) * (n), sizeof(double));\n      |          ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/aleilei/Documents/PerciLLM/20260114/Code-Transfer-Bench/adi/19.c:127:10: warning: incompatible pointer types initializing 'float *' with an expression of type 'double *' [-Wincompatible-pointer-types]\n  127 |   float* q = (double*)calloc((size_t)(n) * (n), sizeof(double));\n      |          ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n4 warnings generated.\n"
+    }
+  },
+  "runs": {
+    "baseline": {
+      "stdout": "1",
+      "stderr": "",
+      "times": [
+        6.632429458,
+        5.228152417,
+        5.091103292,
+        5.069369458000001,
+        5.11745775
+      ],
+      "mean_s": 5.427702475,
+      "median_s": 5.11745775,
+      "min_s": 5.069369458000001,
+      "max_s": 6.632429458
+    },
+    "mixed": {
+      "stdout": "1",
+      "stderr": "",
+      "times": [
+        6.189797875000004,
+        6.178009290999995,
+        6.2434427080000034,
+        6.201286625000002,
+        6.249317999999995
+      ],
+      "mean_s": 6.2123708998,
+      "median_s": 6.201286625000002,
+      "min_s": 6.178009290999995,
+      "max_s": 6.249317999999995
+    }
+  },
+  "comparison": {
+    "baseline_output": 1.0,
+    "mixed_output": 1.0,
+    "relative_error_vs_baseline": 0.0,
+    "speedup_mean": 0.873692598613959,
+    "speedup_median": 0.8252251604319286
+  }
+}

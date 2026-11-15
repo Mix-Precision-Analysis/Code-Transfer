@@ -1,0 +1,323 @@
+{
+    "calls": {
+        "init_array": null,
+        "kernel_adi": null,
+        "main": [
+            {
+                "column": 24,
+                "file": "adi.c",
+                "line": 124,
+                "type": "calloc"
+            },
+            {
+                "column": 24,
+                "file": "adi.c",
+                "line": 125,
+                "type": "calloc"
+            },
+            {
+                "column": 24,
+                "file": "adi.c",
+                "line": 126,
+                "type": "calloc"
+            },
+            {
+                "column": 24,
+                "file": "adi.c",
+                "line": 127,
+                "type": "calloc"
+            },
+            {
+                "column": 3,
+                "file": "adi.c",
+                "line": 130,
+                "type": "init_array"
+            },
+            {
+                "column": 3,
+                "file": "adi.c",
+                "line": 133,
+                "type": "kernel_adi"
+            },
+            {
+                "column": 3,
+                "file": "adi.c",
+                "line": 137,
+                "type": "print_array"
+            },
+            {
+                "column": 3,
+                "file": "adi.c",
+                "line": 140,
+                "type": "free"
+            },
+            {
+                "column": 3,
+                "file": "adi.c",
+                "line": 141,
+                "type": "free"
+            },
+            {
+                "column": 3,
+                "file": "adi.c",
+                "line": 142,
+                "type": "free"
+            },
+            {
+                "column": 3,
+                "file": "adi.c",
+                "line": 143,
+                "type": "free"
+            }
+        ],
+        "print_array": [
+            {
+                "column": 3,
+                "file": "adi.c",
+                "line": 47,
+                "type": "printf"
+            }
+        ]
+    },
+    "global": null,
+    "local": {
+        "init_array": [
+            {
+                "column": 12,
+                "file": "adi.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 29,
+                "name": "u",
+                "range": [],
+                "type": "float*"
+            }
+        ],
+        "kernel_adi": [
+            {
+                "column": 12,
+                "file": "adi.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 59,
+                "name": "u",
+                "range": [],
+                "type": "float*"
+            },
+            {
+                "column": 12,
+                "file": "adi.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 60,
+                "name": "v",
+                "range": [],
+                "type": "float*"
+            },
+            {
+                "column": 12,
+                "file": "adi.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 61,
+                "name": "p",
+                "range": [],
+                "type": "float*"
+            },
+            {
+                "column": 12,
+                "file": "adi.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 62,
+                "name": "q",
+                "range": [],
+                "type": "float*"
+            },
+            {
+                "column": 10,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 65,
+                "name": "DX",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 14,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 65,
+                "name": "DY",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 18,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 65,
+                "name": "DT",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 10,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 66,
+                "name": "B1",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 14,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 66,
+                "name": "B2",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 10,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 67,
+                "name": "mul1",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 16,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 67,
+                "name": "mul2",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 10,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 68,
+                "name": "a",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 13,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 68,
+                "name": "b",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 16,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 68,
+                "name": "c",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 19,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 68,
+                "name": "d",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 22,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 68,
+                "name": "e",
+                "range": [],
+                "type": "float"
+            },
+            {
+                "column": 25,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 68,
+                "name": "f",
+                "range": [],
+                "type": "float"
+            }
+        ],
+        "main": [
+            {
+                "column": 11,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 124,
+                "name": "u",
+                "range": [],
+                "type": "float*"
+            },
+            {
+                "column": 11,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 125,
+                "name": "v",
+                "range": [],
+                "type": "float*"
+            },
+            {
+                "column": 11,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 126,
+                "name": "p",
+                "range": [],
+                "type": "float*"
+            },
+            {
+                "column": 11,
+                "file": "adi.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 127,
+                "name": "q",
+                "range": [],
+                "type": "float*"
+            }
+        ],
+        "print_array": [
+            {
+                "column": 12,
+                "file": "adi.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 44,
+                "name": "u",
+                "range": [],
+                "type": "float*"
+            }
+        ]
+    }
+}

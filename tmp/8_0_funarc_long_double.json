@@ -1,0 +1,163 @@
+{
+    "calls": {
+        "fun": [
+            {
+                "column": 15,
+                "file": "funarc_long_double.c",
+                "line": 20,
+                "type": "sinf"
+            }
+        ],
+        "main": [
+            {
+                "column": 3,
+                "file": "funarc_long_double.c",
+                "line": 52,
+                "type": "sqrtf"
+            },
+            {
+                "column": 3,
+                "file": "funarc_long_double.c",
+                "line": 53,
+                "type": "acosf"
+            },
+            {
+                "column": 3,
+                "file": "funarc_long_double.c",
+                "line": 54,
+                "type": "sinf"
+            },
+            {
+                "column": 12,
+                "file": "funarc_long_double.c",
+                "line": 60,
+                "type": "acos"
+            },
+            {
+                "column": 12,
+                "file": "funarc_long_double.c",
+                "line": 67,
+                "type": "fun"
+            },
+            {
+                "column": 17,
+                "file": "funarc_long_double.c",
+                "line": 68,
+                "type": "sqrt"
+            },
+            {
+                "column": 3,
+                "file": "funarc_long_double.c",
+                "line": 75,
+                "type": "printf"
+            }
+        ]
+    },
+    "global": null,
+    "local": {
+        "fun": [
+            {
+                "column": 30,
+                "file": "funarc_long_double.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 9,
+                "name": "x",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 15,
+                "file": "funarc_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 12,
+                "name": "t1",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 15,
+                "file": "funarc_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 13,
+                "name": "d1",
+                "range": [],
+                "type": "long double"
+            },
+            {
+                "column": 0,
+                "file": "funarc_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 0,
+                "name": "ret.",
+                "range": [],
+                "type": "x86_fp80"
+            }
+        ],
+        "main": [
+            {
+                "column": 15,
+                "file": "funarc_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 43,
+                "name": "h",
+                "range": [],
+                "type": "long double"
+            },
+            {
+                "column": 18,
+                "file": "funarc_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 43,
+                "name": "t1",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 22,
+                "file": "funarc_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 43,
+                "name": "t2",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 26,
+                "file": "funarc_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 43,
+                "name": "dppi",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 15,
+                "file": "funarc_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 45,
+                "name": "s1",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 15,
+                "file": "funarc_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 48,
+                "name": "result",
+                "range": [],
+                "type": "double"
+            }
+        ]
+    }
+}

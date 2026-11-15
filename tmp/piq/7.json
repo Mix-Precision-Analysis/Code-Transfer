@@ -1,0 +1,289 @@
+{
+    "calls": {
+        "expm": null,
+        "ihex": null,
+        "main": [
+            {
+                "column": 8,
+                "file": "piqpr_long_double.c",
+                "line": 30,
+                "type": "series"
+            },
+            {
+                "column": 8,
+                "file": "piqpr_long_double.c",
+                "line": 31,
+                "type": "series"
+            },
+            {
+                "column": 8,
+                "file": "piqpr_long_double.c",
+                "line": 32,
+                "type": "series"
+            },
+            {
+                "column": 8,
+                "file": "piqpr_long_double.c",
+                "line": 33,
+                "type": "series"
+            },
+            {
+                "column": 3,
+                "file": "piqpr_long_double.c",
+                "line": 36,
+                "type": "ihex"
+            },
+            {
+                "column": 3,
+                "file": "piqpr_long_double.c",
+                "line": 39,
+                "type": "printf"
+            }
+        ],
+        "series": [
+            {
+                "column": 9,
+                "file": "piqpr_long_double.c",
+                "line": 77,
+                "type": "expm"
+            },
+            {
+                "column": 9,
+                "file": "piqpr_long_double.c",
+                "line": 86,
+                "type": "pow"
+            }
+        ]
+    },
+    "global": null,
+    "local": {
+        "expm": [
+            {
+                "column": 31,
+                "file": "piqpr_long_double.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 94,
+                "name": "p",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 46,
+                "file": "piqpr_long_double.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 94,
+                "name": "ak",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 15,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 101,
+                "name": "p1",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 19,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 101,
+                "name": "pt",
+                "range": [],
+                "type": "long double"
+            },
+            {
+                "column": 23,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 101,
+                "name": "r",
+                "range": [],
+                "type": "long double"
+            },
+            {
+                "column": 11,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": true,
+                "line": 110,
+                "name": "tp",
+                "range": [],
+                "type": "long double[25]"
+            },
+            {
+                "column": 0,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 0,
+                "name": "ret.",
+                "range": [],
+                "type": "x86_fp80"
+            }
+        ],
+        "ihex": [
+            {
+                "column": 24,
+                "file": "piqpr_long_double.c",
+                "isParam": true,
+                "isStatic": false,
+                "line": 42,
+                "name": "x",
+                "range": [],
+                "type": "long double"
+            },
+            {
+                "column": 15,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 48,
+                "name": "y",
+                "range": [],
+                "type": "long double"
+            },
+            {
+                "column": 8,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 49,
+                "name": "hx",
+                "range": [],
+                "type": "char[17]"
+            }
+        ],
+        "main": [
+            {
+                "column": 15,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 21,
+                "name": "pid",
+                "range": [],
+                "type": "long double"
+            },
+            {
+                "column": 20,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 21,
+                "name": "s1",
+                "range": [],
+                "type": "long double"
+            },
+            {
+                "column": 24,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 21,
+                "name": "s2",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 28,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 21,
+                "name": "s3",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 32,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 21,
+                "name": "s4",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 8,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 26,
+                "name": "chx",
+                "range": [],
+                "type": "char[16]"
+            }
+        ],
+        "series": [
+            {
+                "column": 15,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 66,
+                "name": "ak",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 19,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 66,
+                "name": "eps",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 24,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 66,
+                "name": "p",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 27,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 66,
+                "name": "s",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 30,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 66,
+                "name": "t",
+                "range": [],
+                "type": "double"
+            },
+            {
+                "column": 0,
+                "file": "piqpr_long_double.c",
+                "isParam": false,
+                "isStatic": false,
+                "line": 0,
+                "name": "ret.",
+                "range": [],
+                "type": "x86_fp80"
+            }
+        ]
+    }
+}

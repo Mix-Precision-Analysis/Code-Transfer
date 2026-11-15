@@ -1,0 +1,266 @@
+当前从 `config -> C` 的核心入口是：
+
+```
+source_transform.transform_source_only(...)
+```
+
+评估流水线和 precsearch 都调用它：
+
+- 模型评估：`/Users/aleilei/Documents/PrecGen/train_code/eval_core.py`
+- precsearch：`/Users/aleilei/Documents/PrecGen/precsearch/scripts/transform.py`
+- 公共实现：`/Users/aleilei/Documents/PrecGen/train_code/source_transform.py`
+
+**整体流程**
+
+1. 上层准备输入：
+
+   - 原始源文件 `source_files`
+   - 完整配置 `full_config_from_decision.json` 或 `var_config`
+   - include 路径、编译参数、TransformType 插件路径等
+
+2. `transform_source_only()` 初始化全局开关：
+
+   - `STRICT_CONFIG`
+   - `CALLER_DRIVEN_CLONE`
+   - `ENABLE_CHANGE`
+   - `ENABLE_FIELD_CHANGE`
+   - `FP128_TO_DD`
+   - `CFLAGS`
+   - `SOURCE_FILES`
+
+3. 根据配置决定是否启用结构体字段转换：
+
+   ```
+   if enable_field_change is not None:
+       ENABLE_FIELD_CHANGE = bool(enable_field_change)
+   elif ENABLE_FIELD_CHANGE is None:
+       ENABLE_FIELD_CHANGE = bool(var_config.get("structs"))
+   ```
+
+4. 如果 `CALLER_DRIVEN_CLONE=1`，先用 Python 侧分析生成 `clone_info`：
+
+   ```
+   clone_info = _caller_driven_clone_plans(effective_config)
+   ```
+
+   这一步只在：
+
+   ```
+   STRICT_CONFIG=1 且 CALLER_DRIVEN_CLONE=1
+   ```
+
+   时真正生效。
+
+5. 对每个源文件调用 Clang 插件 `TransformType.so` 生成混合精度 C。
+
+**两种转换路径**
+
+### 情况 A：`caller_driven_clone=0`
+
+只跑一遍插件：
+
+```
+phase = all
+```
+
+等价于：
+
+```
+原始 source.c
+  -> TransformType.so phase=all
+  -> full_config_from_decision.c
+```
+
+此时不会做 caller-driven clone，也不会根据调用方实参类型修 callee 参数。
+
+### 情况 B：`caller_driven_clone=1`
+
+分两阶段：
+
+```
+phase = types-only
+phase = clone-only
+```
+
+流程是：
+
+```
+原始 source.c
+  -> phase=types-only
+  -> stage1_source.c
+  -> phase=clone-only
+  -> full_config_from_decision.c
+```
+
+含义：
+
+- `types-only`：先按配置改变量、局部变量、全局变量、结构体字段等类型，但不做 caller-driven clone。
+- `clone-only`：在已经改过类型的 stage1 源码上，处理函数 clone、调用点替换、callee 参数类型同步等。
+
+如果 `clone-only` 没有生成新文件，会保留 `types-only` 的输出：
+
+```
+if not os.path.exists(transformed):
+    shutil.copy2(stage1_source, transformed)
+```
+
+之后还会执行 Python fallback：
+
+```
+_apply_caller_driven_per_callsite_clones(transformed_sources, clone_info)
+```
+
+这一步用于补充一些插件 clone 没处理到的 per-callsite clone 场景。
+
+**现在已经删除的逻辑**
+
+之前还有一个后置检查：
+
+```
+生成 full_config_from_decision.c 后
+再对这个生成后的 C 跑一次 phase=clone-only
+```
+
+这就是之前的 `boundary clone-only` 检查。现在已经删掉了。
+
+所以现在没有：
+
+```
+TRANSFORM_BOUNDARY_FATAL
+boundary clone-only warning
+boundary clone-only fatal
+```
+
+最终是否成功由后续真实编译/运行决定。
+
+**主要开关含义**
+
+### `strict_config`
+
+评估默认：
+
+```
+strict_config=1
+```
+
+precsearch 取决于运行参数，全局默认是 `False`，但搜索命令里通常会显式传。
+
+作用：
+
+- 传给插件：
+
+  ```
+  --strict-config=true
+  ```
+
+- 只有在 `strict_config=1 && caller_driven_clone=1` 时，Python 侧 caller-driven clone 分析才启用。
+
+- 含义是严格按照 config 中指定的变量/参数范围转换，不做过宽泛推断。
+
+### `caller_driven_clone`
+
+评估默认：
+
+```
+caller_driven_clone=1
+```
+
+作用：
+
+- 开启两阶段转换：
+
+  ```
+  types-only -> clone-only
+  ```
+
+- 允许根据调用方实参实际降精度类型，生成 callee clone。
+
+- 典型场景：
+
+  ```
+  double A[64][64];
+  foo(A);
+  ```
+
+  如果原 
+
+  ```
+  foo
+  ```
+
+   参数是 
+
+  ```
+  long double A[64][64]
+  ```
+
+  ，就需要 clone 成类似：
+
+  ```
+  foo_cd_0(double (*A)[64])
+  ```
+
+### `enable_change`
+
+评估默认：
+
+```
+enable_change=0
+```
+
+但它仍会传给插件：
+
+```
+--enable-change=false
+```
+
+含义大致是控制插件是否执行一般变量类型修改。这里需要注意：你们当前评估里即使 `enable_change=0`，仍然能生成混合精度 C，说明插件内部并不是简单等价于“完全不改类型”。这个开关更像兼容旧 pipeline 的控制项，需要结合 `TransformType.cpp` 具体语义看。
+
+### `enable_field_change`
+
+评估环境默认：
+
+```
+ENABLE_FIELD_CHANGE=1
+```
+
+作用：
+
+- 控制结构体字段是否允许按 config 改类型。
+
+- 如果没有显式传，则根据：
+
+  ```
+  bool(var_config.get("structs"))
+  ```
+
+  自动决定。
+
+也就是说，如果 config 里有：
+
+```
+"structs": ...
+```
+
+并且 `enable_field_change=1`，结构体字段转换会启用。
+
+### `fp128_to_dd`
+
+当前 source-to-source 后端不支持：
+
+```
+if FP128_TO_DD:
+    return None, "source transform backend does not support -fp128todd yet."
+```
+
+所以 config->C 路径里不能开。
+
+### `verbose`
+
+控制失败时是否打印完整 clang/plugin 命令：
+
+```
+stderr=None if VERBOSE else subprocess.DEVNULL
+```
+
+调试转换器时建议开，批量评估时通常关。
